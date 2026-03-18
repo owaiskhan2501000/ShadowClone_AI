@@ -1,19 +1,43 @@
-# Shadow Clone AI (Jutsu Hand Sign Recognition)
+# ShadowClone AI 🥷
 
-This is a Computer Vision project that uses OpenCV, MediaPipe, and YOLOv8 to create a real-time "Shadow Clone" visual effect triggered by a specific hand sign (inspired by Naruto).
+**ShadowClone AI** is a real-time computer vision application that brings the iconic "Shadow Clone Jutsu" to life! Built with Python, it utilizes advanced AI models to detect hand signs and seamlessly project opaque clones of yourself in the background.
 
-## Features
-* **Real-time Hand Tracking:** Uses MediaPipe to detect the exact hand pose.
-* **Gesture Recognition:** Custom logic to recognize the "Cross" index finger gesture.
-* **Body Segmentation:** Uses YOLOv8 Nano (`yolov8n-seg.pt`) to precisely cut out the user's body from the background.
-* **VFX Compositing:** Uses OpenCV's affine transformations and alpha blending to create opaque, depth-aware clones with a smoke puff entrance effect.
+## 🌟 Features
+- **🖐️ Hand Sign Activation:** Powered by **MediaPipe**, the effect only activates when you bring your index fingers together (like a Jutsu hand sign!).
+- **👤 Real-time Segmentation:** Uses **YOLOv8** (`yolov8n-seg`) to accurately cut out your silhouette from the background in real-time.
+- **🌌 Z-Index Depth Control:** Smart depth ordering ensures that your original body stays perfectly in the foreground while the clones remain behind you.
 
-## How to Run
-1. Install the required libraries:
-   `pip install opencv-python mediapipe ultralytics numpy`
-2. Run the script:
-   `python main.py`
-3. Ensure your webcam or DroidCam is connected. Make the "Cross" hand sign to activate the jutsu!
+## 🛠️ Tech Stack
+- **OpenCV:** For real-time video capture and image processing.
+- **MediaPipe:** For precise hand tracking and landmark detection.
+- **YOLOv8 (Ultralytics):** For high-speed instance segmentation.
+- **NumPy:** For advanced matrix transformations and mask handling.
 
-## Developer
-Developed by Mohammad Owais.
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/owaiskhan2501000/ShadowClone_AI.git
+cd ShadowClone_AI
+```
+
+### 2. Install Dependencies
+Make sure you have Python installed. Then, install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Application
+```bash
+python main.py
+```
+*(Note: The `yolov8n-seg.pt` model will automatically download the first time you run the script.)*
+
+## 🎮 How to Use
+1. Run the script and stand in front of your webcam.
+2. Bring your two index fingers close together.
+3. Watch the **Ultimate Opaque Shadow Clones** appear right behind you!
+4. Press `q` to exit the application.
+
+---
+*Created by [Owais Khan](https://github.com/owaiskhan2501000)*
